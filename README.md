@@ -39,17 +39,25 @@ Just add the image, and get back to your writing. (:
 ## Sample
 
 ```
-$ lazyset create './sample/lazyset.png` --width 800
+$ lazyset create './sample/lazyset.png` --width 800,400
 
 ```
 
 #### Original Image:
 
+`lazyset.png`
+
 ![original](./sample/lazyset.png)
 
-#### Created Image:
+#### Created Images:
 
-![created](./sample/lazyset-800.png)
+`lazyset-800.png`
+
+![created at 800](./sample/lazyset-800.png)
+
+`lazyset-400.png`
+
+![created at 400](./sample/lazyset-400.png)
 
 
 

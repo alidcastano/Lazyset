@@ -1,0 +1,25 @@
+{
+  "name": "lazyset",
+  "version": "1.0.0",
+  "description": "automate the creation of responsive images for srcset attribute",
+  "keywords": [
+    "srcset",
+    "image",
+    "resize",
+    "media"
+  ],
+  "author": "Alid Castano",
+  "license": "MIT",
+  "bin": {
+    "lazyset": "./index.js"
+  },
+  "devDependencies": {
+    "chokidar": "^1.6.0",
+    "commander": "^2.9.0",
+    "jimp": "^0.2.27"
+  },
+  "scripts": {
+    "test:watch": "lazyset watch ./examples/ --width 400,700,1200",
+    "test:create": "lazyset create ./examples/shrugged.jpg --width 400,700,1200"
+  }
+}

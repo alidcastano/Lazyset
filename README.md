@@ -28,12 +28,53 @@ Want multiple sizes? Just separate the other widths by commas, e.g., `--width 40
 #### Want me to watch a directory for you?
 
 ```
-$ lazyset watch ./path/ --width 400,700,1200
+$ lazyset watch ./path/ --width 400,800,1200
 ```
 
-Any image you add to directory `./path/` will automatically create replicas at desired sizes.
+Any image you add to the chosen directory, will automatically generate resized replicas, with the width appended to the file name.
 
-Just add the image, and get back to your writing. (:
+You can create an HTML snippet like the one below, and trust that lazyset will do the rest.
+
+```
+  <img src="./path/foo.png"
+       srcset="./path/foo-1200.png 800w,
+               ./path/foo-800.png 800w,
+               ./path/foo-400.png 400w"
+        sizes="max-width: 100%"
+        alt="Responsive images aren't that annoying anymore">
+```
+
+##### Do you use Jekyll, or any other static site generator, and write in markdown?
+
+You can turn the code above into a partial, include it in your markdown with the chosen image, and never have to worry about responsive images again.
+
+Using liquid templating in Jekyll, for example:
+
+```
+// ./includes/image.html
+<figure
+  <img  src="./img/{{include.name}}.{{incude.type}}"
+        srcset="./img/{{include.name}}-1200.{{include.type}} 1200w,
+               ./img/{{include.name}}-800.{{include.type}} 800w,
+               ./img/{{include.name}}-400.{{include.type}} 400w"
+         sizes="max-width: 100%"
+         alt="{{include.name | split: '-'}}">
+</figure>
+```
+
+```
+// ./_posts/08-19-17-lazyload.md
+
+{% include image.html
+  name="foo" type="png %}
+
+```
+
+
+further automate the process as your writing.
+
+
+
 
 
 ## Sample
@@ -58,7 +99,6 @@ $ lazyset create './sample/lazyset.png` --width 800,400
 `lazyset-400.png`
 
 ![created at 400](./sample/lazyset-400.png)
-
 
 
 ## License

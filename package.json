@@ -13,6 +13,10 @@
   "bin": {
     "lazyset": "./index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alidcastano/Lazyset"
+  },
   "devDependencies": {
     "chokidar": "^1.6.0",
     "commander": "^2.9.0",

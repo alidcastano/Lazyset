@@ -1,6 +1,6 @@
 {
   "name": "lazyset",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "automate the creation of responsive images for srcset attribute",
   "keywords": [
     "srcset",
@@ -17,7 +17,7 @@
     "type": "git",
     "url": "https://github.com/alidcastano/Lazyset"
   },
-  "devDependencies": {
+  "dependencies": {
     "chokidar": "^1.6.0",
     "commander": "^2.9.0",
     "jimp": "^0.2.27"

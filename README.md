@@ -1,8 +1,8 @@
 # Lazyset
 
-*Automate the creation of responsive images for srcset attribute.*
+*Automate the creation of responsive images for the `srcset` attribute.*
 
-While writing, you shouldn't have to worry about responsive images. Automate the process, let Lazyset handle it for you.
+While writing, you shouldn't have to worry about responsive images. Automate the process, and let Lazyset handle it for you.
 
 
 ## Install
@@ -25,7 +25,7 @@ Want multiple sizes? Just separate the other widths by commas, e.g., `--width 40
 
 *Height is auto generate to preserve dimensions*
 
-#### Want me to watch a directory for you?
+#### need me to watch a directory for you?
 
 ```
 $ lazyset watch ./path/ --width 400,800,1200
@@ -99,7 +99,6 @@ $ lazyset create './sample/lazyset.png` --width 800,400
 `lazyset-400.png`
 
 ![created at 400](./sample/lazyset-400.png)
-
 
 ## License
 

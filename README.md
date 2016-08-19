@@ -52,6 +52,7 @@ Using liquid templating in Jekyll, for example:
 
 ```
 // ./includes/image.html
+
 <figure
   <img  src="./img/{{include.name}}.{{incude.type}}"
         srcset="./img/{{include.name}}-1200.{{include.type}} 1200w,
@@ -65,14 +66,13 @@ Using liquid templating in Jekyll, for example:
 ```
 // ./_posts/08-19-17-lazyload.md
 
-{% include image.html
-  name="foo" type="png %}
+{% include image.html name="foo" type="png %}
 
 ```
 
+Just run the `lazyload watch` command before you start writing, and add the desired image in the chosen directory.
 
-further automate the process as your writing.
-
+Now all it takes is one line of work to include responsive images in your writing.
 
 
 

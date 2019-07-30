@@ -1,6 +1,6 @@
 {
   "name": "lazyset",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "automate the creation of responsive images for srcset attribute",
   "keywords": [
     "srcset",
@@ -18,12 +18,12 @@
     "url": "https://github.com/alidcastano/Lazyset"
   },
   "dependencies": {
-    "chokidar": "^1.6.0",
+    "chokidar": "^3.0.2",
     "commander": "^2.9.0",
     "jimp": "^0.2.27"
   },
   "scripts": {
-    "test:watch": "lazyset watch ./examples/ --width 400,700,1200",
-    "test:create": "lazyset create ./examples/shrugged.jpg --width 400,700,1200"
+    "test:watch": "node index.js watch ./sample/ --width 400,700,1200",
+    "test:create": "node index.js create ./sample/lazyset.png --width 400,700,1200"
   }
 }
